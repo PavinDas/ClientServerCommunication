@@ -9,18 +9,18 @@ This project consists of three Python scripts that work together to scan a netwo
 
 ## Features
 
-- ***TCP Server (server.py):*** Listens for incoming connections, logs messages, and echoes them back.
+- **TCP Server (server.py):** Listens for incoming connections, logs messages, and echoes them back.
 
-- ***TCP Client (client.py):*** Sends messages to the server.
+- **TCP Client (client.py):** Sends messages to the server.
 
-- ***Network Scanner (main.py):***  Uses ARP requests to identify active hosts in the network.
+- **Network Scanner (main.py):**  Uses ARP requests to identify active hosts in the network.
 
-- ***Log Analyzer (main.py):*** Parses logs to analyze IP activity and requests.
+- **Log Analyzer (main.py):** Parses logs to analyze IP activity and requests.
 
 
 ## Installation
 
-***Prerequisites***
+**Prerequisites**
 
 Ensure you have Python 3 installed on your system. You may also need scapy for network scanning:
 ```bash
@@ -31,19 +31,19 @@ git clone https://github.com/PavinDas/ClientServerCommunication.git
 
 cd ClientServerCommunication
 ```
-***Run the Server***
+**Run the Server**
 
 Start the server to listen for incoming messages:
 ```bash
 python3 server.py
 ```
-***Run the Client***
+**Run the Client**
 
 Send messages to the server:
 ```bash
 python3 client.py
 ```
-***Run Network Scanner and Log Analyzer***
+**Run Network Scanner and Log Analyzer**
 
 To scan the network and analyze logs:
 ```bash
@@ -52,32 +52,32 @@ sudo python3 main.py
 
 ## Usage Details
 
-***Server (server.py)***
+**Server (server.py)**
 
 - Listens on 127.0.0.1:65432.
 - Accepts messages from clients and logs them to network_logs.txt.
 - Echoes received messages back to the client.
 
-***Client (client.py)
+**Client (client.py)**
 - Connects to 127.0.0.1:65432.
 - Sends messages to the server and receives responses.
 
-***Network Scanner (main.py)***
+**Network Scanner (main.py)**
 - Scans the local network (default: 192.168.1.1/24).
 - Identifies active hosts and their MAC addresses.
 
-***Log Analyzer (main.py)***
+**Log Analyzer (main.py)**
 - Reads network_logs.txt.
 - Extracts IPs and request patterns.
 - Displays how often each IP and request appears.
 
-***Log Analyzer (main.py)***
+**Log Analyzer (main.py)**
 - Reads network_logs.txt.
 - Extracts IPs and request patterns.
 - Displays how often each IP and request appears.
 ## Example Outputs
 
-***Server Output***
+**Server Output**
 ```
 Server listening on 127.0.0.1:5050
 Connected by ('127.0.0.1', 5050)
@@ -85,12 +85,12 @@ Received: Hello, Server!
 Received: Another message!
 ```
 
-***Client Output***
+**Client Output**
 ```
 Received from server: Hello, Server!
 Received from server: Another message!
 ```
-***Network Scanner Outputs***
+**Network Scanner Outputs**
 ```
 Scanning network for active hosts...
 Active hosts:
@@ -98,7 +98,7 @@ IP: 192.168.1.10, MAC: AA:BB:CC:DD:EE:FF
 IP: 192.168.1.12, MAC: FF:EE:DD:CC:BB:AA
 ```
 
-***Log Analyzer Outputs***
+**Log Analyzer Outputs**
 ```
 Analyzing network logs...
 IP Address Counts:
